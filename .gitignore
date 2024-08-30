@@ -22,3 +22,5 @@ my_workflows/*
 login/*
 web_custom_versions/
 .DS_Store
+
+*.env

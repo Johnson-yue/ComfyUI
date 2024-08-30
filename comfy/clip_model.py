@@ -134,7 +134,7 @@ class CLIPTextModel(torch.nn.Module):
 
     def forward(self, *args, **kwargs):
         x = self.text_model(*args, **kwargs)
-        out = self.text_projection(x[2])
+        out = self.text_projection(x[2])    # x[0] (bs, 77, 768) last_latent, x[2] (bs, 768) pooler_out
         return (x[0], x[1], out, x[2])
 
 
